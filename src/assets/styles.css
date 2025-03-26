@@ -1,0 +1,258 @@
+:root {
+  --bg: #ebebeb;
+  --bg-dark: #020817;
+  --primary: #7C3AED;
+  --primary-hover: #5f1ecf;
+  --border: #333333;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  box-sizing: content-box;
+  background-color: var(--bg);
+}
+
+.header {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 20px;
+  background-color: var(--bg);
+  border-bottom: 2px solid var(--border);
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header__logo__image {
+  width: 100%;
+}
+
+.header__nav {
+  width: auto;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__user__icon {
+  background-color: var(--primary);
+  color: var(--bg);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.header__user i {
+  font-size: 18px;
+}
+
+main {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.form {
+  width: 400px;
+  padding: 24px;
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg-dark);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bg);
+}
+
+.form__input {
+  width: auto;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.form__button {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--bg);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form__button:hover {
+  background-color: var(--primary-hover);
+  color: var(--bg-dark);
+  transition: color 0.3s ease;
+}
+
+.todos__section {
+  width: 80%;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  gap: 20px;
+}
+
+.todos__container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todos__header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.todos__header__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.todos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-dark);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo__text {
+  width: 70%;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg);
+  display: flex;
+  gap: 4px;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.todo__text>span {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo__text>input {
+  background-color: var(--bg-dark);
+  border: 1px solid var(--bg);
+  margin: 0;
+}
+
+.todo__text>input:checked+span {
+  text-decoration: line-through;
+  color: green;
+}
+
+.todo__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo__actions button {
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--bg);
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.todo__actions__edit:hover {
+  background-color: var(--primary-hover);
+  color: var(--bg-dark);
+}
+
+.todo__actions__delete:hover {
+  background-color: red;
+  color: var(--bg-dark);
+}
+
+.todo__update__form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__update__form>input {
+  width: 100%;
+  height: 32px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.todo__update__form>input:focus-within {
+  outline: none;
+}
+
+.todo__update__form>button {
+  width: fit-content;
+  height: 32px;
+  padding: 2px 12px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.todo__update__form>button:hover {
+  background-color: var(--primary-hover);
+  color: var(--bg-dark);
+}

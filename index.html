@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/assets/reset.css" />
+  <link rel="stylesheet" href="/src/assets/styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <title>Lista de Tarefas</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="/logo-kursus.png" class="header__logo__image" alt="Logo da Kursus" />
+    </div>
+    <div class="header__user">
+      <div class="header__user__icon">
+        <i data-lucide="user"></i>
+      </div>
+      <span>Usuário</span>
+    </div>
+  </header>
+
+  <main>
+    <form class="form" id="form">
+      <h2 class="form__title">O que iremos fazer hoje?</h2>
+      <input class="form__input" id="form-input"  type="text" placeholder="Insira a tarefa...">
+      <button class="form__button" type="submit">Adicionar</button>
+    </form>
+    <section class="todos__section">
+      <div class="todos__container">
+        <div class="todos__header">
+          <h3 class="todos__header__title">TAREFAS A FAZER:</h3>
+        </div>
+        <ul class="todos" id="incomplete-todos">
+          <li class="todo">
+            <div class="todo__text">
+              <input type="checkbox">
+              <span>Estudar Typescript</span>
+            </div>
+            <div class="todo__actions">
+              <button class="todo__actions__edit">
+                <i data-lucide="pen-square"></i>
+              </button>
+              <button class="todo__actions__delete">
+                <i data-lucide="trash"></i>
+              </button>
+            </div>
+          </li>
+          <li class="todo">
+            <div class="todo__text">
+              <input type="checkbox">
+              <span>Programar um site muito daora</span>
+            </div>
+            <div class="todo__actions">
+              <button class="todo__actions__edit">
+                <i data-lucide="pen-square"></i>
+              </button>
+              <button class="todo__actions__delete">
+                <i data-lucide="trash"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="todos__container">
+        <div class="todos__header">
+          <h3 class="todos__header__title">TAREFAS CONCLUÍDAS:</h3>
+        </div>
+        <ul class="todos" id="completed-todos">
+          
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/app/main.ts"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
